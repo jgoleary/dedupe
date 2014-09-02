@@ -291,9 +291,8 @@ def scoreDuplicates(records, data_model, num_cores=1, threshold=0) :
 
 
 
-def fillQueue(queue, iterable, stop_signals) :
+def fillQueue(queue, iterable, stop_signals, chunk_size = 100000) :
     iterable = iter(iterable)
-    chunk_size = 100000
     multiplier = 1.1
 
     # initial values
